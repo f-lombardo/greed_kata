@@ -8,8 +8,8 @@ public class SingleRule implements Rule {
   public SingleRule(int number, int score) {
     this.number = number;
     this.score = score;
-    
   }
+  
   public RuleResult apply(RuleResult previousResult) {
     int occurrencies = previousResult.occurrenciesOf(number);
     if (occurrencies > 0) {
@@ -19,5 +19,4 @@ public class SingleRule implements Rule {
     }
     return previousResult;
   }
-
 }

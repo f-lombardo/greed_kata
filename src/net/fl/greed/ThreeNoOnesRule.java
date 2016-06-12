@@ -1,7 +1,6 @@
 package net.fl.greed;
 
 public class ThreeNoOnesRule implements Rule {
-
   public RuleResult apply(RuleResult result) {
     for (int toFind = 2; toFind <= 6; toFind++) {
       result = threeOccurrenciesOf(result, toFind);      
@@ -17,5 +16,4 @@ public class ThreeNoOnesRule implements Rule {
     }
     return previousResult;
   }
-
 }

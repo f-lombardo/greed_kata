@@ -1,7 +1,6 @@
 package net.fl.greed;
 
 public class ThreeOnesRule implements Rule {
-
   public RuleResult apply(RuleResult previousResult) {
     if (previousResult.occurrenciesOf(1) >= 3) {
       return previousResult
@@ -10,5 +9,4 @@ public class ThreeOnesRule implements Rule {
     }
     return previousResult;
   }
-
 }
