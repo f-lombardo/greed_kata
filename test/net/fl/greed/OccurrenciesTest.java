@@ -23,4 +23,12 @@ public class OccurrenciesTest {
     occurrencies.remove(10, 1);
     assertEquals(0, occurrencies.of(1));
   }
+  
+  @Test
+  public void removingZeroOccurrenciesDoesntChangeAnything() {
+    Occurrencies occurrencies = new Occurrencies(asList(1,1,1,2,2,3)).remove(2, 1);
+    assertEquals(1, occurrencies.of(1));
+    occurrencies.remove(0, 1);
+    assertEquals(1, occurrencies.of(1));
+  }
 }

@@ -8,8 +8,7 @@ public class Greed {
 
   public Greed() {
     rules = new ArrayList<Rule>();
-    rules.add(new ThreeOnesRule());
-    rules.add(new ThreeNoOnesRule());
+    rules.add(new ThreeItemsRule());
     rules.add(new SingleRule(1, 100));
     rules.add(new SingleRule(5, 50));
   }
