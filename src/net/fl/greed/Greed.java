@@ -9,8 +9,8 @@ public class Greed {
   public Greed() {
     rules = new ArrayList<Rule>();
     rules.add(new ThreeItemsRule());
-    rules.add(new SingleRule(1, 100));
-    rules.add(new SingleRule(5, 50));
+    rules.add(new SingleItemRule(1, 100));
+    rules.add(new SingleItemRule(5, 50));
   }
 
   public int score(List<Integer> dice) {

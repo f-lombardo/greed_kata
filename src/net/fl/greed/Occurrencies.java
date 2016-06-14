@@ -2,8 +2,6 @@ package net.fl.greed;
 
 import java.util.List;
 
-import static java.util.Arrays.asList;
-
 public class Occurrencies {
   private static final int FACES_OF_A_DIE = 6;
   

@@ -1,11 +1,11 @@
 package net.fl.greed;
 
-public class SingleRule implements Rule {
+public class SingleItemRule implements Rule {
 
   private int number;
   private int score;
   
-  public SingleRule(int number, int score) {
+  public SingleItemRule(int number, int score) {
     this.number = number;
     this.score = score;
   }
