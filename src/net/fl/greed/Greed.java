@@ -8,9 +8,9 @@ public class Greed {
 
   public Greed() {
     rules = new ArrayList<Rule>();
-    rules.add(new ThreeItemsRule(1, ScoringStrategy.CONST_VALUE));
+    rules.add(new ThreeItemsRule(1, 1000));
     for (int i = 2; i <= 6; i++) {
-      rules.add(new ThreeItemsRule(i, ScoringStrategy.MULTYPLY_NR));
+      rules.add(new ThreeItemsRule(i, i * 100));
     }
     rules.add(new SingleItemRule(1, 100));
     rules.add(new SingleItemRule(5, 50));
