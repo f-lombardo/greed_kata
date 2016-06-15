@@ -19,11 +19,7 @@ public class Occurrencies {
   }
 
   public Occurrencies remove(int times, int number) {
-    if (occurrencies[number] > times) {
-      occurrencies[number] -= times;
-    } else {
-      occurrencies[number] = 0;
-    }
+    occurrencies[number] = Math.max(occurrencies[number] - times, 0);
     return this;
   }
 }
