@@ -8,12 +8,14 @@ public class Greed {
 
   public Greed() {
     rules = new ArrayList<Rule>();
-    rules.add(new ThreeItemsRule(1, 1000));
+    rules.add(new NItemsRule(1, 1000, 3));
     for (int i = 2; i <= 6; i++) {
-      rules.add(new ThreeItemsRule(i, i * 100));
+      rules.add(new NItemsRule(i, i * 100, 3));
     }
-    rules.add(new SingleItemRule(1, 100));
-    rules.add(new SingleItemRule(5, 50));
+    rules.add(new NItemsRule(1, 200, 2));
+    rules.add(new NItemsRule(5, 100, 2));
+    rules.add(new NItemsRule(1, 100, 1));
+    rules.add(new NItemsRule(5, 50, 1));
   }
 
   public int score(List<Integer> dice) {
