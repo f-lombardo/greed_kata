@@ -13,10 +13,10 @@ public class NItemsRule implements Rule {
   }
   
   public RuleResult apply(RuleResult previousResult) {
-    if (previousResult.occurrenciesOf(toFind) >= numberOfItems) {
-      return previousResult
-             .addScore(score)
-             .removeOccurrencies(numberOfItems, toFind);
+    while (previousResult.occurrenciesOf(toFind) >= numberOfItems) {
+      previousResult =  previousResult
+                        .addScore(score)
+                        .removeOccurrencies(numberOfItems, toFind);
     }
     return previousResult;
   }

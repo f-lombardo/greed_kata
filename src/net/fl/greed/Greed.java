@@ -12,9 +12,7 @@ public class Greed {
     for (int i = 2; i <= 6; i++) {
       rules.add(new NItemsRule(i, i * 100, 3));
     }
-    rules.add(new NItemsRule(1, 200, 2));
-    rules.add(new NItemsRule(5, 100, 2));
-    rules.add(new NItemsRule(1, 100, 1));
+    rules.add(new NItemsRule(1, 100, 1)); 
     rules.add(new NItemsRule(5, 50, 1));
   }
 
